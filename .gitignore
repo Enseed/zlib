@@ -23,3 +23,7 @@
 /zlib.pc
 
 .DS_Store
+**/ZlibDllDebug/
+**/ZlibDllRelease/
+**/ZlibDllDebug DLL/
+**/ZlibDllRelease DLL/
