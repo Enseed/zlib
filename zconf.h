@@ -8,6 +8,7 @@
 #ifndef ZCONF_H
 #define ZCONF_H
 
+
 /*
  * If you *really* need a unique prefix for all types and library functions,
  * compile with -DZ_PREFIX. The "standard" zlib should be compiled without it.
@@ -162,6 +163,7 @@
 #  define WINDOWS
 #endif
 #if defined(_WIN32) || defined(_WIN32_WCE) || defined(__WIN32__)
+#  define _WIN32_WINNT  _WIN32_WINNT_WIN7
 #  ifndef WIN32
 #    define WIN32
 #  endif
