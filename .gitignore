@@ -27,3 +27,6 @@
 **/ZlibDllRelease/
 **/ZlibDllDebug DLL/
 **/ZlibDllRelease DLL/
+**/Release/
+**/Debug/
+**/Debug DLL/
