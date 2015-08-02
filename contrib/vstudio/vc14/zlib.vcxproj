@@ -87,48 +87,56 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Release.props" />
     <Import Project="props\Target Win32.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Release.props" />
     <Import Project="props\Target Win32.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Debug.props" />
     <Import Project="props\Target Win32.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Debug.props" />
     <Import Project="props\Target Win32.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Release.props" />
     <Import Project="props\Target x64.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Release.props" />
     <Import Project="props\Target x64.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Debug.props" />
     <Import Project="props\Target x64.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\Set Version.props" />
     <Import Project="props\zlib.props" />
     <Import Project="props\Profile Debug.props" />
     <Import Project="props\Target x64.props" />
@@ -139,9 +147,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">false</GenerateManifest>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">false</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">false</GenerateManifest>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'">false</GenerateManifest>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release Static|x64'">false</LinkIncremental>
@@ -279,9 +285,6 @@
     <ResourceCompile />
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\zlibvc.def</ModuleDefinitionFile>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
@@ -599,14 +602,12 @@ ml64.exe /Fl%(Filename).lst /c /Zi %(FullPath)</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\deflate.h" />
-    <ClInclude Include="..\..\..\infblock.h" />
-    <ClInclude Include="..\..\..\infcodes.h" />
     <ClInclude Include="..\..\..\inffast.h" />
     <ClInclude Include="..\..\..\inftrees.h" />
-    <ClInclude Include="..\..\..\infutil.h" />
     <ClInclude Include="..\..\..\zconf.h" />
     <ClInclude Include="..\..\..\zlib.h" />
     <ClInclude Include="..\..\..\zutil.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
