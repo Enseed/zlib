@@ -30,3 +30,5 @@
 **/Release/
 **/Debug/
 **/Debug DLL/
+**/Debug Static/
+**/Release Static/
