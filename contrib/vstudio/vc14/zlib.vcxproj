@@ -335,9 +335,7 @@
       </BrowseInformation>
     </ClCompile>
     <ResourceCompile />
-    <Link>
-      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-    </Link>
+    <Link />
     <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|x64'">
@@ -386,9 +384,7 @@
       </BrowseInformation>
     </ClCompile>
     <ResourceCompile />
-    <Link>
-      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-    </Link>
+    <Link />
     <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
