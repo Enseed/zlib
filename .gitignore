@@ -32,3 +32,10 @@
 **/Debug DLL/
 **/Debug Static/
 **/Release Static/
+*.obj
+*.user
+*.pdb
+*.log
+*.cache
+*.exe
+*.ilk
